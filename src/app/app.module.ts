@@ -3,28 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { SearchComponent } from './search/search.component';
-import { UploaderComponent } from './uploader/uploader.component';
-import { HistoryComponent } from './history/history.component';
-import { ProfileComponent } from './profile/profile.component';
-import { NavigateMenuComponent } from './navigate-menu/navigate-menu.component';
+import { HomeModule } from "./modules/home/home.module";
+import { HistoryModule } from "./modules/history/history.module";
+import { ProfileModule } from "./modules/profile/profile.module";
+import { SearchModule } from "./modules/search/search.module";
+import { UploaderModule } from "./modules/uploader/uploader.module";
+import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
+import { ContainerModule } from "./components/container/container.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SearchComponent,
-    UploaderComponent,
-    HistoryComponent,
-    ProfileComponent,
-    NavigateMenuComponent
-  ],
-  providers: [],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    HistoryModule,
+    ProfileModule,
+    SearchModule,
+    UploaderModule,
+    NavigateMenuModule,
+    ContainerModule,
   ],
+  declarations: [
+    AppComponent,
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
