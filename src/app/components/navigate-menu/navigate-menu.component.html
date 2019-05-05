@@ -1,7 +1,10 @@
-<nav class="navigate-menu">
-  <a routerLink="">Home</a>
-  <a routerLink="/search">Search</a>
-  <a routerLink="/uploader">Uploader</a>
-  <a routerLink="/history">History</a>
-  <a routerLink="/profile">Profile</a>
+<nav class="navigate">
+  <a *ngFor="let navigateItem of navigateItems"
+     routerLink="{{navigateItem.link}}"
+     routerLinkActive="--active"
+     [routerLinkActiveOptions]="{exact:true}"
+     class="navigate-link">
+    <i class="fas {{navigateItem.icon}} navigate-icon"></i>
+    {{ navigateItem.title }}
+  </a>
 </nav>

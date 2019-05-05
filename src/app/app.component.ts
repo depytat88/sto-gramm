@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'sto-gramm';
+  bodyContainerClassList   = '--content';
+  headerContainerClassList = '--header';
+  footerContainerClassList = '--footer'
 }

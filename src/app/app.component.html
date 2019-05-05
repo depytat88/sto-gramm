@@ -1,7 +1,11 @@
-<app-container>
+<app-container [classList]="headerContainerClassList">
+  header
+</app-container>
+
+<app-container [classList]="bodyContainerClassList">
   <router-outlet></router-outlet>
 </app-container>
 
-<app-container>
+<app-container [classList]="footerContainerClassList">
   <app-navigate-menu></app-navigate-menu>
 </app-container>
