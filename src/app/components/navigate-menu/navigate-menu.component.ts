@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { StatesConstants } from "../../constants/states.constants";
-import { NavigateItemModel } from "./navigate-item.model";
+import { NavigateItemModel } from "./navigate-item.component/navigate-item.model";
 import { IconsConstants } from "../../constants/icons.constants";
 
 @Component({

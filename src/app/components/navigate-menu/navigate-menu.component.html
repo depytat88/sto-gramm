@@ -1,10 +1,4 @@
 <nav class="navigate">
-  <a *ngFor="let navigateItem of navigateItems"
-     routerLink="{{navigateItem.link}}"
-     routerLinkActive="--active"
-     [routerLinkActiveOptions]="{exact:true}"
-     class="navigate-link">
-    <i class="fas {{navigateItem.icon}} navigate-icon"></i>
-    {{ navigateItem.title }}
-  </a>
+  <app-navigate-item *ngFor="let navigateItem of navigateItems"
+                     [navigateItem]="navigateItem"></app-navigate-item>
 </nav>
