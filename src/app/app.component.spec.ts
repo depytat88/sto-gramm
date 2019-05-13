@@ -1,12 +1,28 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { HomeModule } from "./modules/home/home.module";
+import { HistoryModule } from "./modules/history/history.module";
+import { ProfileModule } from "./modules/profile/profile.module";
+import { SearchModule } from "./modules/search/search.module";
+import { UploaderModule } from "./modules/uploader/uploader.module";
+import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
+import { ContainerModule } from "./components/container/container.module";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        BrowserModule,
+        HomeModule,
+        HistoryModule,
+        ProfileModule,
+        SearchModule,
+        UploaderModule,
+        NavigateMenuModule,
+        ContainerModule,
       ],
       declarations: [
         AppComponent
@@ -18,18 +34,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'sto-gramm'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('sto-gramm');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to sto-gramm!');
   });
 });
