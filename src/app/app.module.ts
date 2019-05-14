@@ -1,15 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeModule } from "./modules/home/home.module";
-import { HistoryModule } from "./modules/history/history.module";
-import { ProfileModule } from "./modules/profile/profile.module";
-import { SearchModule } from "./modules/search/search.module";
-import { UploaderModule } from "./modules/uploader/uploader.module";
-import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
-import { ContainerModule } from "./components/container/container.module";
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeModule} from "./modules/home/home.module";
+import {HistoryModule} from "./modules/history/history.module";
+import {ProfileModule} from "./modules/profile/profile.module";
+import {SearchModule} from "./modules/search/search.module";
+import {UploaderModule} from "./modules/uploader/uploader.module";
+import {NavigateMenuModule} from "./components/navigate-menu/navigate-menu.module";
+import {FooterModule} from "./components/layout/footer/footer.module";
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { ContainerModule } from "./components/container/container.module";
     SearchModule,
     UploaderModule,
     NavigateMenuModule,
-    ContainerModule,
+    FooterModule,
   ],
   declarations: [
     AppComponent,
@@ -29,4 +29,5 @@ import { ContainerModule } from "./components/container/container.module";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -9,6 +9,8 @@ import { SearchModule } from "./modules/search/search.module";
 import { UploaderModule } from "./modules/uploader/uploader.module";
 import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
 import { ContainerModule } from "./components/container/container.module";
+import {MainLayoutModule} from "./components/layout/main-layout/main-layout.module";
+import {FooterModule} from "./components/layout/footer/footer.module";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -23,6 +25,8 @@ describe('AppComponent', () => {
         UploaderModule,
         NavigateMenuModule,
         ContainerModule,
+        MainLayoutModule,
+        FooterModule,
       ],
       declarations: [
         AppComponent

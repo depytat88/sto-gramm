@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import {HistoriesModule} from "./histories/histories.module";
+import {MainLayoutModule} from "../../components/layout/main-layout/main-layout.module";
+import {HomeHeaderModule} from "./home-header/home-header.module";
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,6 +13,8 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HistoriesModule,
+        MainLayoutModule,
+        HomeHeaderModule
       ],
       declarations: [ HomeComponent ]
     })

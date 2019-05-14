@@ -1,9 +1,16 @@
-import { NgModule } from '@angular/core';
-import { HomeComponent } from "./home.component";
-import { HistoriesModule } from "./histories/histories.module";
+import {NgModule} from '@angular/core';
+import {HomeComponent} from "./home.component";
+import {HistoriesModule} from "./histories/histories.module";
+import {MainLayoutModule} from "../../components/layout/main-layout/main-layout.module";
+import {HomeHeaderModule} from "./home-header/home-header.module";
 
 @NgModule({
-  imports:      [ HistoriesModule ],
-  declarations: [ HomeComponent ],
+  imports: [
+    HistoriesModule,
+    MainLayoutModule,
+    HomeHeaderModule
+  ],
+  declarations: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {
+}
