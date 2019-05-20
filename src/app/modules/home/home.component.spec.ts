@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import {HistoriesModule} from "./histories/histories.module";
 import {MainLayoutModule} from "../../components/layout/main-layout/main-layout.module";
 import {HomeHeaderModule} from "./home-header/home-header.module";
+import {PostCardModule} from "./post-card/post-card.module";
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -14,7 +15,8 @@ describe('HomeComponent', () => {
       imports: [
         HistoriesModule,
         MainLayoutModule,
-        HomeHeaderModule
+        HomeHeaderModule,
+        PostCardModule
       ],
       declarations: [ HomeComponent ]
     })
