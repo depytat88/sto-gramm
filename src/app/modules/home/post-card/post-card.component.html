@@ -3,13 +3,14 @@
     <div class="author-avatar"></div>
 
     <div class="post-introducing-info">
-      <div class="author-name">@dmitryZiabko</div>
-      <div class="post-place">Minsk</div>
+      <div class="author-name">@{{post.authorName}}</div>
+      <div class="post-place">{{post.postPlace}}</div>
     </div>
   </header>
   <div class="post-card__photo"></div>
   <div class="post-card__actions">
-    <span class="action-icon">
+    <span class="action-icon"
+          [class.--liked]="post.liked">
       <i class="far fa-heart"></i>
     </span>
 
@@ -27,16 +28,18 @@
   </div>
   <div class="post-card__info">
     <div class="likes">
-      88,985 likes
+      {{post.likes}} likes
     </div>
 
     <div class="author-description">
-      <span class="author-name">@dmitryZiabko</span>
+      <span class="author-name">@{{post.authorName}}</span>
 
       <span class="author-text">
-        <a href="#" class="hashtag">#CCCCCC</a>
-
-        <a href="#" class="hashtag">#HHHHHHH</a>
+        <a *ngFor="let hashtag of post.hashtags"
+           href="{{hashtag}}"
+           class="hashtag">
+          # {{hashtag}}
+        </a>
       </span>
     </div>
   </div>
@@ -44,6 +47,6 @@
     comments
   </div>
   <div class="post-card__time">
-    5m ago
+    {{post.date}}
   </div>
 </div>
