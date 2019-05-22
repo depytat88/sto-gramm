@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {PostModel} from "./post.model";
 
 @Component({
   selector: 'app-post-card',
@@ -7,7 +8,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostCardComponent implements OnInit {
-  @Input() post;
+  @Input() post: PostModel;
 
   constructor() {
 

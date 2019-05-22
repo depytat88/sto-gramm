@@ -1,6 +1,6 @@
 .post-card
   display: block
-  width: 500px
+  width: 100%
   padding: 15px 15px 30px
   background-color: #fff
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -22,10 +22,12 @@
   font-style: italic
   font-size: 12px
 
+.post-card__photo-block
+  font-size: 0
+  background-color: #000
+
 .post-card__photo
   width: 100%
-  height: 400px
-  background-color: #000
 
 .post-card__actions
   padding-top: 5px
@@ -46,9 +48,11 @@
   font-weight: 700
   font-size: 14px
 
-
 .author-description
   padding-bottom: 3px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
 
 .author-link,
 .hashtag
@@ -59,6 +63,10 @@
   font-weight: 700
   font-size: 15px
   color: black
+
+.author-text
+  color: black
+  font-size: 14px
 
 .hashtag
   color: #4444c1
@@ -75,3 +83,5 @@
 
 .post-card__time
   font-weight: 300
+  font-size: 14px
+  color: #908f8f

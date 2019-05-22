@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {HttpService} from "../../services/http.service";
+import {PostModel} from "./post-card/post.model";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import {HttpService} from "../../services/http.service";
   providers: [HttpService]
 })
 export class HomeComponent implements OnInit {
-  postsList: string;
+  postsList: PostModel[];
 
   constructor(
     private httpService: HttpService,
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   ) {
     this.httpService.getJSON().subscribe(
       data => {
-        this.postsList = data;
+        this.postsList = data as PostModel[];
         console.log(this.postsList);
         this.cdr.detectChanges();
       }

@@ -7,7 +7,11 @@
       <div class="post-place">{{post.postPlace}}</div>
     </div>
   </header>
-  <div class="post-card__photo"></div>
+  <div class="post-card__photo-block">
+    <img src="{{post.photoUrl}}"
+         alt="{{post.authorName}}"
+    class="post-card__photo">
+  </div>
   <div class="post-card__actions">
     <span class="action-icon"
           [class.--liked]="post.liked">
@@ -22,7 +26,7 @@
       <i class="fas fa-location-arrow"></i>
     </span>
 
-    <span class="action-icon">
+    <span *ngIf="!post.addedToSaved" class="action-icon">
       <i class="far fa-bookmark"></i>
     </span>
   </div>
@@ -40,6 +44,8 @@
            class="hashtag">
           # {{hashtag}}
         </a>
+
+        {{post.description}}
       </span>
     </div>
   </div>
