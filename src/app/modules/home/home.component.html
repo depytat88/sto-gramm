@@ -1,11 +1,12 @@
 <app-main-layout>
   <app-home-header header></app-home-header>
 
-  <div body style="height: 100%">
+  <div body class="main-content">
     <app-histories></app-histories>
 
     <ul class="posts">
-      <li *ngFor="let post of postsList">
+      <li *ngFor="let post of postsList"
+      class="post">
         <app-post-card [post]="post"></app-post-card>
       </li>
     </ul>

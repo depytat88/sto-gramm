@@ -1,8 +1,10 @@
+@import "../../../../styles/color-variables"
+
 .post-card
   display: block
   width: 100%
   padding: 15px 15px 30px
-  background-color: #fff
+  background-color: $white
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
 
 .post-card__header
@@ -12,7 +14,7 @@
 .author-avatar
   width: 32px
   height: 32px
-  background-color: #d6d5d5
+  background-color: $grey-3
   border-radius: 50%
 
 .post-introducing-info
@@ -24,7 +26,7 @@
 
 .post-card__photo-block
   font-size: 0
-  background-color: #000
+  background-color: $black
 
 .post-card__photo
   width: 100%
@@ -40,7 +42,7 @@
   &:last-child
     float: right
   &.--liked
-    color: red
+    color: $red
 
 
 .likes
@@ -69,7 +71,7 @@
   font-size: 14px
 
 .hashtag
-  color: #4444c1
+  color: $blue
   margin-left: 4px
   &:first-child
     margin-left: 0
@@ -84,4 +86,4 @@
 .post-card__time
   font-weight: 300
   font-size: 14px
-  color: #908f8f
+  color: $grey-3

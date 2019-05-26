@@ -1,13 +1,17 @@
+@import "./../../../styles/dimensions-variables"
+
+.main-content
+  height: 100%
+
 .posts
-  height: calc(100% - 70px)
+  height: calc(100% - #{$histories-height})
   margin: 0
   padding: 0
   font-size: 0
   list-style-type: none
   overflow-y: auto
-  li
-    display: inline-block
-    width: calc(50% - 20px)
-    margin: 10px
 
-
+.post
+  display: inline-block
+  width: calc(50% - 20px)
+  margin: 10px

@@ -8,7 +8,7 @@ export class PostModel {
     readonly likes: number,
     readonly description: string,
     readonly hashtags: string[],
-    readonly date: string,
+    readonly date: string
   ) {
   }
 }
