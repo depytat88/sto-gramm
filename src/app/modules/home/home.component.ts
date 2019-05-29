@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     this.httpService.getJSON(JsonFilesUrlsConstants.POSTS).subscribe(
       data => {
         this.postsList = data as PostModel[];
-        console.log(this.postsList);
         this.cdr.detectChanges();
       }
     );

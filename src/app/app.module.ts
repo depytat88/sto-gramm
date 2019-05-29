@@ -10,11 +10,13 @@ import {SearchModule} from "./modules/search/search.module";
 import {UploaderModule} from "./modules/uploader/uploader.module";
 import {NavigateMenuModule} from "./components/navigate-menu/navigate-menu.module";
 import {FooterModule} from "./components/layout/footer/footer.module";
+import {AuthenticateModule} from "./modules/authenticate/authenticate.module";
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthenticateModule,
     HomeModule,
     HistoryModule,
     ProfileModule,
@@ -26,7 +28,6 @@ import {FooterModule} from "./components/layout/footer/footer.module";
   declarations: [
     AppComponent,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
