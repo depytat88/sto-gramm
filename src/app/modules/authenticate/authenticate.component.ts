@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Router} from "@angular/router";
-import {NgForm} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-navigate-item',
@@ -9,20 +9,26 @@ import {NgForm} from "@angular/forms";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthenticateComponent {
-  public username: string;
-  public password: string;
   public errorMessage: string;
+  form: FormGroup = this.formBuilder.group({
+    username: new FormControl('', [
+    ]),
+    password: new FormControl('', [
+    ])
+  });
 
   private usernameRight: string = 'xxx';
   private passwordRight: string = 'xxx';
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private formBuilder: FormBuilder) {
   }
 
-  authenticate(form: NgForm) {
+  authenticate(form: FormGroup) {
     if (form.valid
-      && form.controls['username'].value === this.usernameRight
-      && form.controls['password'].value === this.passwordRight) {
+      && this.form.controls['username'].value === this.usernameRight
+      && this.form.controls['password'].value === this.passwordRight) {
       this.router.navigateByUrl("");
     } else {
       this.errorMessage = "Form Data Invalid";

@@ -1,17 +1,19 @@
-LOG IN
+<div class="auth-container">
+  <div class="auth-card">
+    <form novalidate [formGroup]="form" (ngSubmit)="authenticate(form)">
+      <input  type="name"
+              name="username"
+              formControlName="username"
+              required
+              placeholder="Name"/>
 
-<form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
-  <input  type="name"
-          name="username"
-         [(ngModel)]="username"
-          required
-          placeholder="Name"/>
+      <input  type="password"
+              name="password"
+              formControlName="password"
+              required
+              placeholder="Password"/>
 
-  <input  type="password"
-          name="password"
-          [(ngModel)]="password"
-          required
-          placeholder="Password"/>
-
-  <button type="submit">ZZZZ</button>
-</form>
+      <button type="submit">ZZZZ</button>
+    </form>
+  </div>
+</div>
