@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import { NavigateItemModel } from "./navigate-item.model";
+import {NavigateItemModel} from "./navigate-item.model";
 import {
   trigger,
   state,
@@ -27,17 +27,17 @@ import {
       transition(
         'shake-start => shake-end',
         animate('500ms ease-in',
-        keyframes([
-          style({transform: 'translate3d(-1px, 0, 0)', offset: 0.1}),
-          style({transform: 'translate3d(1px, 0, 0)', offset: 0.2}),
-          style({transform: 'translate3d(-1px, 0, 0)', offset: 0.3}),
-          style({transform: 'translate3d(1px, 0, 0)', offset: 0.4}),
-          style({transform: 'translate3d(-1px, 0, 0)', offset: 0.5}),
-          style({transform: 'translate3d(1px, 0, 0)', offset: 0.6}),
-          style({transform: 'translate3d(-1px, 0, 0)', offset: 0.7}),
-          style({transform: 'translate3d(1px, 0, 0)', offset: 0.8}),
-          style({transform: 'translate3d(-1px, 0, 0)', offset: 0.9}),
-      ]))),
+          keyframes([
+            style({transform: 'translate3d(-1px, 0, 0)', offset: 0.1}),
+            style({transform: 'translate3d(1px, 0, 0)', offset: 0.2}),
+            style({transform: 'translate3d(-1px, 0, 0)', offset: 0.3}),
+            style({transform: 'translate3d(1px, 0, 0)', offset: 0.4}),
+            style({transform: 'translate3d(-1px, 0, 0)', offset: 0.5}),
+            style({transform: 'translate3d(1px, 0, 0)', offset: 0.6}),
+            style({transform: 'translate3d(-1px, 0, 0)', offset: 0.7}),
+            style({transform: 'translate3d(1px, 0, 0)', offset: 0.8}),
+            style({transform: 'translate3d(-1px, 0, 0)', offset: 0.9}),
+          ]))),
     ]),
   ]
 })

@@ -6,7 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  bodyContainerClassList   = '--content';
-  headerContainerClassList = '--header';
-  footerContainerClassList = '--footer'
 }

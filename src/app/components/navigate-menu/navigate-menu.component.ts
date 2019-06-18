@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NavigateItemModel } from "./navigate-item.component/navigate-item.model";
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {NavigateItemModel} from "./navigate-item.component/navigate-item.model";
 import {NavListConstants} from "../../constants/nav-list";
 
 @Component({
