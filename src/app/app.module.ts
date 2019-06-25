@@ -9,6 +9,7 @@ import {ProfileModule} from "./modules/profile/profile.module";
 import {SearchModule} from "./modules/search/search.module";
 import {UploaderModule} from "./modules/uploader/uploader.module";
 import {AuthenticateModule} from "./modules/authenticate/authenticate.module";
+import {NotFoundModule} from "./modules/not-found/not-found.module";
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import {AuthenticateModule} from "./modules/authenticate/authenticate.module";
     ProfileModule,
     SearchModule,
     UploaderModule,
+    NotFoundModule
   ],
   declarations: [
     AppComponent,

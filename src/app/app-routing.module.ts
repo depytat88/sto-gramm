@@ -6,9 +6,11 @@ import {UploaderComponent} from './modules/uploader/uploader.component';
 import {HistoryComponent} from './modules/history/history.component';
 import {ProfileComponent} from './modules/profile/profile.component';
 import {AuthenticateComponent} from "./modules/authenticate/authenticate.component";
+import {NotFoundComponent} from "./modules/not-found/not-found.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: '**', component: NotFoundComponent},
   {path: 'search', component: SearchComponent},
   {path: 'uploader', component: UploaderComponent},
   {path: 'history', component: HistoryComponent},
